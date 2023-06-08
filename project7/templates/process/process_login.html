@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+       <STYLE>
+       .button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+            #bg{
+    background-size: 1900px 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+    </STYLE>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+</head>
+<body id="bg" style="background-image: url('{% static "Images/bg11.png"%}')"; >
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+
+    <div class="main" >
+
+        <section class="signup">
+             <img src="{% static 'user/images/signup-bg.jpg' %}" alt="">
+            <div class="container" >
+                <div class="signup-content" style="background-color:#33302F;">
+                    <form method="POST" id="signup-form" class="signup-form"  action="/process_login_form/">
+                        {% csrf_token %}
+                        <h2 class="form-title" STYLE="color:white;">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="email" id="name" placeholder="Your email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="email" placeholder="Your Password"/>
+                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <input type="text" class="form-input" name="password" id="password" placeholder="Password" >-->
+<!--                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group">-->
+<!--                            <input type="number" class="form-input" name="contact" id="re_password" placeholder="Your contact"/>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="text" class="form-input" name="address" id="re_password" placeholder="Your Address"/>-->
+<!--                        </div>-->
+<!--                         {{form.captcha}}-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" style="padding:5px;">-->
+<!--                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>-->
+<!--                        </div>-->
+
+<!--                        <div class="form-group">-->
+<!--                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>-->
+<!--                        </div>-->
+<!--                    </form>-->
+                        <button class="button-3" role="button" type="submit">LOGIN</button>
+                    <p class="loginhere">
+                        NEW USER ? <a href="/submit/" class="loginhere-link" style="color:white;">Register here</a>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'register/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'register/js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+<!-- HTML !-->
+
+
+/* CSS */

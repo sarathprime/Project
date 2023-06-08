@@ -1,0 +1,262 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+
+
+{% load static %}
+<html lang="en">
+<head>
+	<STYLE>
+		a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+	</STYLE>
+<title>Feedback Form Flat Responsive widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Feedback Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- font files -->
+<link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<!-- /font files -->
+<!-- css files -->
+<link href="{% static 'user/domain_purpose/css/style.css' %}" rel='stylesheet' type='text/css' media="all" />
+<!-- /css files -->
+</head>
+<body>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<ul>
+  <li><a href="#home">HOME</a></li>
+  <li><a href="/domain_register_form/">USER DETAILS </a></li>
+	<li><a href="/domain_purpose_form/">USER PURPOSE </a></li>
+	<li><a href="/user_virtual/">DOMAIN DETAILS </a></li>
+	<li><a href="/domin_user_p/">DOMAIN PURPOSE</a></li>
+	<li><a href="/user_logout/">LOGOUT </a></li>
+
+<!--  <li class="dropdown">-->
+<!--    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>-->
+<!--    <div class="dropdown-content">-->
+<!--      <a href="#">Link 1</a>-->
+<!--      <a href="#">Link 2</a>-->
+<!--      <a href="#">Link 3</a>-->
+<!--    </div>-->
+<!--  </li>-->
+</ul>
+<!--<h1 class="header-w3ls">Feedback Form</h1>-->
+<div class="content-w3ls" style="width:600px; margin-top:50px;">
+<!--	<a href="#" class="previous">&laquo; Previous</a>-->
+	<div class="form-w3ls">
+		<form action="/domain_purpose_form/" method="post">
+
+			{% csrf_token %}
+			<div class="content-wthree1">
+
+				<div class="grid-agileits1">
+					<div class="form-control" style="width:1350px;">
+
+<!--						<label class="header">ORGANISATION NAME <span>:</span></label>-->
+						<input type="text" id="name" name="name" placeholder="Customer Name" value="{{data.name}}" required="">
+					</div>
+		
+					<div class="form-control" style="width:1350px;">
+<!--						<label class="header">ORGANISATION EMAIL <span>:</span></label>-->
+						<input type="email" id="email" name="email" placeholder="Mail@example.com" value="{{data.email}}"  required="">
+					</div>
+	
+					<div class="form-control" style="width:1350px;">
+
+<!--						<label class="header">Organization <span>:</span></label>-->
+
+						<input type="text" id="orgn" name="organisation" placeholder="Organization" value="{{data.organisation}}" required="">
+
+					</div>
+				</div>
+
+
+				<div class="grid-agileits2" style="margin-top:260px;">
+					<div class="form-control" style="margin-left:-320px; width:1200px;">
+<!--						<label class="header">PURPOSE <span>:</span></label>-->
+						<select name="purpose">
+							<option value="Products" selected>SELECT PURPOSE</option>
+							<option value="Computers">OWN PURPOSE</option>
+							<option value="Games">THIRD PARTY</option>
+<!--							<option value="Books">Books</option>-->
+<!--							<option value="Music">Music</option>-->
+<!--							<option value="Photos">Photos</option>-->
+<!--							<option value="Film">Film</option>-->
+						</select>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+<!--			<div class="content-wthree2">-->
+<!--				<div class="grid-w3layouts1">-->
+<!--					<div class="w3-agile1">-->
+<!--						<label class="rating">Ratings for Company<span>:</span></label>-->
+<!--						<ul>-->
+<!--							<li>-->
+<!--								<input type="radio" id="a-option" name="selector1">-->
+<!--								<label for="a-option">very high</label>-->
+<!--								<div class="check"></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="b-option" name="selector1">-->
+<!--								<label for="b-option">high</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="c-option" name="selector1">-->
+<!--								<label for="c-option">medium</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="d-option" name="selector1">-->
+<!--								<label for="d-option">low</label>-->
+<!--								<div class="check"></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="e-option" name="selector1">-->
+<!--								<label for="e-option">very low</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</div>	-->
+<!--				</div>-->
+<!--				<div class="grid-w3layouts2">-->
+<!--					<div class="w3-agile2">-->
+<!--						<label class="rating">Ratings for Support <span>:</span></label>-->
+<!--						<ul>-->
+<!--							<li>-->
+<!--								<input type="radio" id="f-option" name="selector2">-->
+<!--								<label for="f-option">Very good</label>-->
+<!--								<div class="check"></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="g-option" name="selector2">-->
+<!--								<label for="g-option">good</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="h-option" name="selector2">-->
+<!--								<label for="h-option">average</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="i-option" name="selector2">-->
+<!--								<label for="i-option">fair</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<input type="radio" id="j-option" name="selector2">-->
+<!--								<label for="j-option">poor</label>-->
+<!--								<div class="check"><div class="inside"></div></div>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>	-->
+				<div class="clear"></div>
+			</div>
+			<div class="content-wthree3">	
+				<div class="form-control" style="margin-top:-260px; width:760px;">
+<!--					<label class="enquiry">Customer Enquiry <span>:</span></label>-->
+					<textarea id="message" name="enquiry" placeholder="Your Queries" title="Please enter Your Queries" ></textarea>
+					<div class="clear"></div>
+				</div>
+			</div>	
+			<div class="content-wthree4">	
+				<div class="form-control" style="margin-left:-120px;">
+					<input type="submit" class="register" value="Submit">
+					<input type="reset" class="reset" value="Reset">
+					<div class="clear"></div>
+				</div>
+			</div>		
+		</form>
+	</div>
+</div>
+
+<!--<p class="copyright">© 2016 Feedback Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>-->
+
+</body>
+</html>

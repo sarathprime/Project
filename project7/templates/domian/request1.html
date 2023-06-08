@@ -1,0 +1,101 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+{% extends "domian/domain_index.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+<title>Coupled Login Form with Flat Responsive widget Design :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Coupled Login Form Bootstrap Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<link href="{% static 'domain/access/css/style.css' %}" rel='stylesheet' type='text/css' />
+<!--webfonts-->
+<link href="//fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900" rel="stylesheet">
+<!--//webfonts-->
+
+</head>
+<body style="background-color:none;">
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<!-- section -->
+<section class="register">
+	
+		<h1>DOMAIN ACCESS FORM</h1>
+		<div class="register-left">
+			<div class="register-in" style="background-color:none;">
+			<h3>REQUEST ACCESS</h3>
+				<form action="/domain_access_1/" method="post">
+					{% csrf_token %}
+						<div class="fields-grid">
+							<div class="styled-input agile-styled-input-top">
+								<input type="email" name="user_email" required="">
+								<label>USER EMAIL</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="text" name="purpose" required="">
+								<label>PURPOSE</label>
+								<span></span>
+							</div>
+							
+							<div class="clear"> </div>
+							 
+						</div>
+						<div class="w3_lgn">
+						<input type="submit" value="REQUEST">
+						</div>
+					</form>
+			</div>
+		</div>
+		<div class="register-right">
+			<div class="register-in">
+<!--				<h2>Subscribe Here</h2>-->
+				<p>Enter Id To Access</p>
+				<div class="register-form">
+					<form action="/domain_accept_1/" method="post">
+						{% csrf_token %}
+						<div class="fields-grid">
+							
+							
+							<div class="styled-input">
+								<input type="text" name="accessid" required="">
+								<label>ACCESS ID</label>
+								<span></span>
+							</div>
+							
+							
+							<div class="clear"> </div>
+							
+						</div>
+						<div class="w3_lgn1">
+						<input type="submit" value="ENTER">
+						</div>
+					</form>
+			
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	<div class="clear"> </div>
+	
+		
+	<!-- copyright -->
+	<p class="agile-copyright">&copy  2018 Coupled Login Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+	<!-- //copyright -->
+</section>
+<!-- //section -->
+{% endblock %}
+</body>
+</html>

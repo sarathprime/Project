@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS only: Google Captcha</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<!-- partial:index.partial.html -->
+<div class="captcha">
+	<div class="spinner">
+		<label>
+			<input type="checkbox" onclick="$(this).attr('disabled','disabled');">
+			<span class="checkmark"><span>&nbsp;</span></span>
+		</label>
+	</div>
+	<div class="text">
+		I'm not a robot
+	</div>
+	<div class="logo">
+		<img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/"/>
+		<p>reCAPTCHA</p>
+		<small>Privacy - Terms</small>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

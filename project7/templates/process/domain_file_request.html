@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+{% extends "process/process_index.html" %}
+{% load static %}
+
+{% block content %}
+  <head>
+  	<title>Table 07</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'cipher/table/css/style.css' %}">
+
+	</head>
+	<body>
+	<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">ENCRYPTED DATA</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+<!--						     <th>NAME</th>-->
+					        <th>EMAIL</th>
+<!--					        <th>CITY</th>-->
+<!--					        <th>STATE</th>-->
+<!--					        <th>STATUS</th>-->
+<!--					        <th>URL</th>-->
+<!--							  <th>COUNTRY</th>-->
+<!--							  <th>FILES</th>-->
+							  <th>FORMARD</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+								{% for data in datas %}
+						      <td>{{data.user_email}}</td>
+<!--					        <td>{{data.email}}</td>-->
+<!--					        <td>{{data.city}}</td>-->
+<!--					        <td>{{data.state}}</td>-->
+<!--							  <td>{{data.predict}}</td>-->
+<!--							  <td>{{data.url}}</td>-->
+<!--							  <td>{{data.country}}</td>-->
+<!--							  <td><a href=" {{data.file.url}}" download> DOWNLOAD</a></td>-->
+
+					        <td><a href="/domin_send_id_key/{{data.id}}" class="btn btn-primary" style="background-color:black;">INTIMATE</a></td>
+						    </tr>
+<!--						    <tr>-->
+<!--						      <th scope="row">2</th>-->
+<!--						      <td>Jacob</td>-->
+<!--						      <td>Thornton</td>-->
+<!--						      <td>jacobthornton@email.com</td>-->
+<!--						    </tr>-->
+<!--						    <tr>-->
+<!--						      <th scope="row">3</th>-->
+<!--						      <td>Larry</td>-->
+<!--						      <td>the Bird</td>-->
+<!--						      <td>larrybird@email.com</td>-->
+<!--						    </tr>-->
+<!--						    <tr>-->
+<!--						      <th scope="row">4</th>-->
+<!--						      <td>John</td>-->
+<!--						      <td>Doe</td>-->
+<!--						      <td>johndoe@email.com</td>-->
+<!--						    </tr>-->
+<!--						    <tr>-->
+<!--						      <th scope="row">5</th>-->
+<!--						      <td>Gary</td>-->
+<!--						      <td>Bird</td>-->
+<!--						      <td>garybird@email.com</td>-->
+<!--						    </tr>-->
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endfor %}
+	<script src="{% static 'cipher/table/js/jquery.min.js' %}"></script>
+  <script src="{% static 'cipher/table/js/popper.js' %}"></script>
+  <script src="{% static 'cipher/table/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'cipher/table/js/main.js' %}"></script>
+{% endblock %}
+	</body>
+</html>
+

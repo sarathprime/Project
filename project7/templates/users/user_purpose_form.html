@@ -1,0 +1,277 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% extends "users/user_index.html" %}
+{% load static %}
+{% block content %}
+
+
+<html lang="en">
+<head>
+	<style>
+		/* CSS */
+.button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+    @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  background: #181818;
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+  font: 1em/1.6 "Varela Round", Arial, sans-serif;
+  color: #999;
+  font-weight: 400;
+  max-width: 25em;
+  padding: 1em;
+  margin: 10% auto;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.filupp > input[type=file] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.filupp {
+  position: relative;
+  background: #242424;
+  display: block;
+  padding: 1em;
+  font-size: 1em;
+  width: 100%;
+  height: 3.5em;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #0b0b0b;
+}
+
+.filupp:before {
+  content: "";
+  position: absolute;
+  top: 1.5em;
+  right: 0.75em;
+  width: 2em;
+  h
+  }
+}
+label{
+  display: inline-block;
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+	</style>
+<title> volunteer enrollment form Widget a Flat Responsive Widget Template::w3layouts</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content=" volunteer enrollment form Widget a Flat Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+<link rel="stylesheet" href="{% static 'user/domin_user_purpose/css/style.css' %}" type="text/css" media="all" /><!-- Style-CSS -->
+<link href="//fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+</head>
+<body style="height:600px;">
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+	<section class="agile-volt" >
+		<div class="agile-voltheader">
+			<h1>volunteer <label>enrollment</label> form</h1>
+		</div>
+		<div class="agile-voltsub">
+			<h2>volunteer form</h2>
+				<form action="/domin_user_p/" method="post"   enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="agile-name" >
+						<p>name</p>
+						<input type="text" name="username" placeholder="enter a user name" required="" autofocus>
+					</div>
+					<div class="clear"></div>
+					<div class="agile-email">
+						<p>email</p>
+						<input type="email" name="email" placeholder="email address" required="">
+					</div>
+					<div class="clear"></div>
+					<div class="agile-address">
+						<p>street address</p>
+						<input type="text" name="street" placeholder="street address" required="" >
+					</div>
+					<div class="clear"></div>
+					<div class="agile-city">
+						<p>city</p>
+						<input type="text" name="city" placeholder="city" min="1" max="12"/>
+					</div>
+					<div class="clear"></div>
+					<div class="agile-state">
+						<p>state</p>
+						<input type="text" name="state" placeholder="state">
+					</div>
+					<div class="clear"></div>
+					<div class="agile-pin">
+						<p>pincode</p>
+						<input type="tel" name="pincode" placeholder="pin code" />
+					</div>
+					<div class="agile-email">
+						<p>ENTER URL</p>
+						<input type="text" name="url" placeholder="URL" required="">
+					</div>
+					<div class="clear"></div>
+					<div class="agile-country">
+						<p>COUNTRY</p>
+						<select name="country">
+							<option value="country">Please Select</option>
+							<option value="INDIA">INDIA</option>
+							<option value="USA">USA</option>
+							<option value="JAPAN">JAPAN</option>
+							<option value="GERMANY">GERMANY</option>
+							<option value="AFRICA">AFRICA</option>
+							<option value="AUSTRALIA">AUSTRALIA</option>
+						</select>
+					</div>
+					<!-- HTML !-->
+
+
+					<label>PLEASE UPLOAD YOUR MODEL
+					 <input type="file" id="upload" hidden name="file">
+					<label for="upload">Choose file</label></label>
+<!--					<div class="clear"></div>-->
+<!--					<div class="agile-work">-->
+<!--						<p>how many days of the week do you work</p>-->
+<!--							<div class="agile-days">-->
+<!--								<span class="Monday">-->
+<!--									<input type="checkbox" name="week" value="monday">monday<br>	-->
+<!--								</span>-->
+<!--								<span class="Tuesday">-->
+<!--									<input type="checkbox" name="week" value="Tuesday">tuesday<br>					-->
+<!--								</span>-->
+<!--								<span class="Wednesday">-->
+<!--									<input type="checkbox" name="week" value="Wednesday">wednesday<br>-->
+<!--								</span>-->
+<!--								<span class="Thursday">-->
+<!--									<input type="checkbox" name="week" value="thursday">thursday<br>-->
+<!--								</span>-->
+<!--								<span class="Friday">-->
+<!--									<input type="checkbox" name="week" value="friday">friday<br>-->
+<!--								</span>-->
+<!--								<span class="Saturday">-->
+<!--									<input type="checkbox" name="week" value="saturday">saturday<br>-->
+<!--								</span>-->
+<!--								<span class="Sunday">-->
+<!--									<input type="checkbox" name="week" value="sunday">sunday<br>-->
+<!--								</span>-->
+<!--							</div>-->
+<!--					</div>-->
+<!--					<div class="clear"></div>-->
+<!--					<div class="agile-week">-->
+<!--						<p>how many hours do you work per day </p>-->
+<!--						 <div class="agile-from">-->
+<!--						 <p>from (morning)</p>-->
+<!--							<input type="number" name="time" min="1" max="12" placeholder="AM">-->
+<!--						 </div>-->
+<!--						 <div class="agile-to">-->
+<!--						 <p>to(Evening)</p>-->
+<!--							<input type="number" name="time" min="1" max="12" placeholder="PM">-->
+<!--						 </div>-->
+<!--					</div>-->
+					<div class="clear"></div>
+					<input type="submit" value="submit" />
+				</form>
+		</div>
+	<div class="agile-copyright">
+<!--				<footer>&copy; 2017 volunteer enrollment form.All Rights Reserved.Designed by <a href="http://www.w3layouts.com" target="blank">w3layouts</a></footer>-->
+			</div>
+	</section>
+{% endblock %}
+</body>
+</html>

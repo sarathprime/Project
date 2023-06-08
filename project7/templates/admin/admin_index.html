@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <STYLE>
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 2px 6px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+  </STYLE>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Kelly Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'admin/index/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'admin/index/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'admin/index/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'admin/index/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'admin/index/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'admin/index/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'admin/index/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'admin/index/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'admin/index/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.9.1
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">ADMIN</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="/a_index/">HOME</a></li>
+          <li><a href="/view_domain/">DOMAIN</a></li>
+          <li><a href="/view_donor_purpose/">DOMAIN PURPOSE</a></li>
+<!--            <label for="cars">Choose a car:</label>-->
+          <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" style="padding:2px 2px; margin-left:20px; background-color:#e9e8e6; color:#8e8e8f">ACCESS</button>
+  <div id="myDropdown" class="dropdown-content" style="padding:2px 2px;">
+    <a href="/access_domain_team/">DOMAIN</a>
+    <a href="/access_procee_team/">PROCESS</a>
+    <a href="/access_cipher_team/">CIPHER</a>
+  </div>
+</div>
+          <li><a href="/admin_payslip_form/">PAYSLIP</a></li>
+<!--          <li><a href="portfolio.html">Portfolio</a></li>-->
+          <li><a href="/A_logout/">LOGOUT</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    {% block content %}
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1>ADMIN</h1>
+      <h2>GOOD COMPANY NEEDS GOOD LEADER</h2>
+      <a href="about.html" class="btn-about">WELCOME</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kelly</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  {% endblock %}
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'admin/index/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'admin/index/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'admin/index/js/main.js' %}"></script>
+
+</body>
+
+</html>

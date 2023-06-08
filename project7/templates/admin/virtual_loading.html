@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Unboxing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="{% static 'loading_box/style.css' %}">
+
+</head>
+<body>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<!-- partial:index.partial.html -->
+<div class="preloader">
+	<div class="box">
+		<div class="box__inner">
+			<div class="box__back-flap"></div>
+			<div class="box__right-flap"></div>
+			<div class="box__front-flap"></div>
+			<div class="box__left-flap"></div>
+			<div class="box__front"></div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box__inner">
+			<div class="box__back-flap"></div>
+			<div class="box__right-flap"></div>
+			<div class="box__front-flap"></div>
+			<div class="box__left-flap"></div>
+			<div class="box__front"></div>
+		</div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+	<div class="line">
+		<div class="line__inner"></div>
+	</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

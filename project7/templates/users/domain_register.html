@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends "users/user_index.html" %}
+{% load static %}
+{% block content %}
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Daily UI 001 Sign Up Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'user/domain/style.css' %}">
+
+</head>
+<body style="overflow: visible">
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<!-- partial:index.partial.html -->
+<div class="signupSection" style="height:600px; margin-top:50px;">
+  <div class="info">
+    <h2 style="color:white;">DATA SPILL PREVENTION</h2>
+<!--    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>-->
+<!--    <p>The Future Is Here</p>-->
+  </div>
+  <form action="/domain_register_form/" method="POST" class="signupForm" name="signupform" >
+    {% csrf_token %}
+    <h2 style="color:white;">ENTER DETAILS</h2>
+    <ul class="noBullet" style="margin-top:10px;">
+      <li>
+        <label for="username"></label>
+        <input type="text" class="inputFields" id="username" name="name" placeholder="ORGANISATION" value="" oninput="return userNameValidation(this.value)" required/>
+      </li>
+      <li>
+        <label for="username"></label>
+        <input type="text" class="inputFields" id="username" name="purpose" placeholder="ORGANISATION PURPOSE" value="" oninput="return userNameValidation(this.value)" required/>
+      </li>
+       <li>
+        <label for="username"></label>
+        <input type="text" class="inputFields" id="username" name="type" placeholder="ORGANISATION TYPE" value="" oninput="return userNameValidation(this.value)" required/>
+      </li>
+      <li>
+        <label for="username"></label>
+        <input type="text" class="inputFields" id="username" name="email" placeholder="ORGANISATION EMAIL" value="" oninput="return userNameValidation(this.value)" required/>
+      </li>
+      <li>
+        <label for="password"></label>
+        <input type="password" class="inputFields" id="password" name="password" placeholder="PASSWORD" value="" oninput="return passwordValidation(this.value)" required/>
+      </li>
+      <li>
+<!--        <label for="email"></label>-->
+<!--        <input type="email" class="inputFields" id="email" name="email" placeholder="Email" value="" required/>-->
+      </li>
+      <li id="center-btn">
+        <input type="submit" id="join-btn" name="join" alt="Join" value="Join">
+      </li>
+    </ul>
+  </form>
+</div>
+<!-- partial -->
+  <script  src="{% static 'user/domain/script.js' %}"></script>
+
+</body>
+{% endblock %}
+</html>

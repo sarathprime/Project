@@ -1,0 +1,66 @@
+<html>
+<!DOCTYPE html>
+{% extends "users/user_index.html" %}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Free Contact Form :: W3layouts</title>
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+
+<body>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+</script>
+  <!-- simple-contact-form2 -->
+  <section class="w3l-simple-contact-form2">
+    <div class="section-gap">
+      <div class="wrapper">
+        <div class="form-inner-cont">
+          <form action="/user_virtual/" method="post" class="signin-form">
+            {% csrf_token %}
+            <h3 style="color:white; margin-top:-30px;">USER VIRTUAL BOX</h3>
+            <div class="form-input" style="margin-top:-3\50px;">
+<!--              <label for="w3lName">Name</label>-->
+              <input style="font-color:white;" type="text" name="name" id="w3lName" placeholder="NAME" required="" />
+            </div>
+            <div class="form-input">
+<!--              <label for="w3lSender">Email</label>-->
+              <input type="email" name="email" id="w3lSender" placeholder="EMAIL" required />
+            </div>
+            <div class="form-input">
+<!--              <label for="w3lSubject">Subject</label>-->
+              <input type="text" name="gender" id="w3lSubject" placeholder="GENDER" required />
+            </div>
+            <div class="form-input">
+<!--              <label for="w3lSubject">Subject</label>-->
+              <input type="text" name="address" id="w3lSubject" placeholder="ADDRESS" required />
+            </div>
+            <div class="form-input">
+<!--              <label for="w3lSubject">Subject</label>-->
+              <input type="password" name="password" id="w3lSubject" placeholder="PASSWORD" required />
+            </div>
+            <div class="form-input">
+<!--              <label for="w3lMessage">Message</label>-->
+              <textarea name="enquiry" id="w3lMessage" placeholder="Type your query here" required=""></textarea>
+            </div>
+            <button class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /simple-contact-form2 -->
+{% endblock %}
+</body>
+
+</html>
